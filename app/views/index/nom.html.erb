@@ -1,0 +1,11 @@
+<% content_for :nav do %>
+    <li><%= link_to "Tri par Médecins", {:action => "medecins"} %></li>
+    <li><%= link_to "Tri par Département", {:action => "departements"} %></a></li>
+    <li class="active"><%= link_to "Tri par Nom", {:action => "nom"} %>
+<% end %>
+
+<h2>Tri par nom</h2>
+<%= form_tag :action => "medecins" do %>
+    <%= text_field_tag(:nom) %>
+    <%= submit_tag("Valider") %>
+<% end %>

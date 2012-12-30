@@ -1,2 +1,9 @@
-<h1>Index#index</h1>
-<p>Find me in app/views/index/index.html.erb</p>
+<% content_for :nav do %>
+    <li><%= link_to "Tri par Médecins", {:action => "medecins"} %></li>
+    <li><%= link_to "Tri par Département", {:action => "departements"} %></a></li>
+    <li><%= link_to "Tri par Nom", {:action => "nom"} %>
+<% end %>
+        
+        <h1>Accueil</h1>
+        <p>Bienvenue sur le site de consultation des médecins de France. Vous pouvez voir tous les médecins de France,
+            les trier par nom, ou par département grâce au menu qui se trouve en haut.</p>

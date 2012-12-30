@@ -1,0 +1,30 @@
+<% content_for :nav do %>
+    <li class="active"><%= link_to "Tri par Médecins", {:action => "medecins"} %></li>
+    <li><%= link_to "Tri par Département", {:action => "departements"} %></a></li>
+    <li><%= link_to "Tri par Nom", {:action => "nom"} %>
+<% end %>
+
+        <h2>Médecins</h2>
+<table class="table table-hover">
+    <thead>
+        <td>Nom</td>
+        <td>Prenom</td>
+        <td>Adresse</td>
+        <td>Téléphone</td>
+        <td>Spécialité Complémentaire</td>
+        <td>Département</td>
+    </thead>
+    <tbody>
+        <% @medecins.each do |medecin| %>
+            <tr>
+                <td><%= medecin.nom %></td>
+                <td><%= medecin.prenom %></td>
+                <td><%= medecin.adresse %></td>
+                <td><%= medecin.tel %></td>
+                <td><%= medecin.specialiteComplementaire %></td>
+                <td><%= medecin.departement %><td>
+                <td></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
