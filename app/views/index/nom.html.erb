@@ -5,6 +5,9 @@
 <% end %>
 
 <h2>Tri par nom</h2>
+<p>
+	Veuillez entrer les lettres par lesquelles le nom du docteur doit commencer.
+</p>
 <%= form_tag :action => "medecins" do %>
     <%= text_field_tag(:nom) %>
     <%= submit_tag("Valider") %>

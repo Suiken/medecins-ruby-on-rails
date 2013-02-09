@@ -7,7 +7,7 @@ class IndexController < ApplicationController
         if params[:departement] != nil then
             @medecins = Medecin.find(:all, :conditions => ["departement = ?", params[:departement]]).sort_by{|medecin| [medecin.nom, medecin.prenom]}
         elsif params[:nom] != nil then
-            nom = "%" + params[:nom] + "%"
+            nom = params[:nom] + "%"
             @medecins = Medecin.find(:all, :conditions => ["nom like ?", nom]).sort_by{|medecin| [medecin.nom, medecin.prenom]}
         else
             @medecins = Medecin.all.sort_by{|medecin| [medecin.nom, medecin.prenom]}
