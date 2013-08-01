@@ -9,7 +9,7 @@ development:
   database: cours_gsb
   pool: 5
   username: root
-  password: Cupidon1291
+  password: 
   socket: /var/mysql/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
